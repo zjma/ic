@@ -8,8 +8,8 @@ use ic_crypto_test_utils_reproducible_rng::reproducible_rng;
 use rand::{CryptoRng, Rng};
 
 fn setup_sharing_instance_and_witness() -> (SharingInstance, SharingWitness) {
-    const NODE_COUNT: usize = 28;
-    const THRESHOLD: usize = 19;
+    const NODE_COUNT: usize = 250;
+    const THRESHOLD: usize = 150;
 
     let rng = &mut reproducible_rng();
 
@@ -74,8 +74,8 @@ fn zk_sharing_proof(c: &mut Criterion) {
 fn setup_chunking_instance_and_witness<R: Rng + CryptoRng>(
     rng: &mut R,
 ) -> (ChunkingInstance, ChunkingWitness) {
-    const NODE_COUNT: usize = 28;
-    const NUM_CHUNKS: usize = 16;
+    const NODE_COUNT: usize = 250;
+    const NUM_CHUNKS: usize = 150;
 
     let g1 = G1Affine::generator();
 
