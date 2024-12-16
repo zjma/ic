@@ -74,8 +74,8 @@ fn zk_sharing_proof(c: &mut Criterion) {
 fn setup_chunking_instance_and_witness<R: Rng + CryptoRng>(
     rng: &mut R,
 ) -> (ChunkingInstance, ChunkingWitness) {
-    const NODE_COUNT: usize = 250;
-    const NUM_CHUNKS: usize = 150;
+    const NODE_COUNT: usize = 28;
+    const NUM_CHUNKS: usize = 16;
 
     let g1 = G1Affine::generator();
 
